@@ -23,4 +23,4 @@ Conditional Variational Autoencoders take a different turn and label the input a
 
 The following is the architecture behind CVAE:
 
-![]()
+![architecture](vae-gaussian.png)
