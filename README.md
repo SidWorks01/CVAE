@@ -14,9 +14,9 @@ VAE, is actually less similar to all the autoencoder models above, but deeply ro
 
 Instead of mapping the input into a fixed vector z, we want to map it into a distribution.The relationship between the data input x and the latent encoding vector x can be fully defined by:
 
-Prior - P(z)
-Likelihood - P (x/z)
-Posterior - P (z/x)
+1. Prior - P(z)
+2. Likelihood - P (x/z)
+3. Posterior - P (z/x)
 
 Conditional Variational Autoencoders take a different turn and label the input and output data with a labelled given input .
 
