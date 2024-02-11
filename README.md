@@ -5,9 +5,9 @@ Model that Generates inputs for particular outputs in a sinosoidal function usin
 
 Our Task At Hand is to:
 
-1. Predict the values of \(x_0\) and \(x_1\) that satisfy the equations \(y_1 = \sin(5x_0 + 3x_1)\) and \(y_2 = \cos(4x_0 + 8x_1)\), provided in the dataset located at ./data_1.
+1. Predict the values of \(x_0\) and \(x_1\) that satisfy the equations \(y_1 = sin(5x_0 + 3x_1)\) and \(y_2 = cos(4x_0 + 8x_1)\), provided in the dataset located at ./data_1.
 
-2. Take on the more demanding task of predicting the values of \(x_0\) and \(x_1\) that fulfill the equations \(y_1 = \cos(49x_0 + 63x_1)\) and \(y_2 = \cos(4x_0 + 8x_1)\), found in the dataset located at ./data_2.
+2. Take on the more demanding task of predicting the values of \(x_0\) and \(x_1\) that fulfill the equations \(y_1 = cos(49x_0 + 63x_1)\) and \(y_2 = cos(4x_0 + 8x_1)\), found in the dataset located at ./data_2.
 
 
 ## Algorithm:
