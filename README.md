@@ -102,4 +102,41 @@ The Hyperparameters that affect the model are :
       * wy: This Hyperparameter is for the reconstruction loss of the conditional data (y_loss).A higher value of wy places more emphasis on accurately reconstructing the conditional data, while a lower value reduces its importance.
       * If Wx or Wy= 0 , it acts as an Variational AutoEncoder as one of the distribution is effectively representing a singular value because of small variance.
 
+As we moved on to work our way to Hyperparamter tuning of out model we saw the following approaches:
 
+
+1.   Manual Estimation using analysing plotted samples
+2.   Grid Search
+3.   Bayesian Optimization
+
+In this Notebook , I will be exploring Manual Estimation , so as to get an idea of how CVAE works and changes in Loss function Hyperparameters can affect the model.
+
+
+We took the following test cases and found out the optimum Hyperparamters for our different datasets found in the repo:
+#### 2.4.1 Test Cases: Loss function = L1_mean
+
+1.   $\beta$ = 1 , W1=0 , W2=0 ( above test case )
+2.   $\beta$ = 0 , W1=1 , W2=0, latent_dim=100
+3.  $\beta$ = 0 , W1=1 , W2=1, latent_dim=100
+4.  $\beta$ = 1 , W1=0.5 , W2=0.5, latent_dim=100
+5.  $\beta$ = 0.8 , W1=0.6 , W2=0.6, latent_dim=60
+6.  $\beta$ = 0.8 , W1=0.65 , W2=0.72 , latent_dim=85
+
+#### 2.4.2 Test Cases: Loss function = MSE
+
+1.  $\beta$ = 1 , W1=0.5 , W2=0.5
+2.  $\beta$ = 0.8 , W1=0.6 , W2=0.6
+
+#### 2.4.3 Test Cases: Loss function = L1_sum
+
+1.  $\beta$ = 1 , W1=0.5 , W2=0.5
+
+From Above test cases we can derive :
+
+1. Latent space> 100
+2. beta>1
+3. 0.7 >wx > 0.5
+4. 0.65>wy>0.5
+5. Min epochs = 25
+
+For Future Prospects one can do Optimization using Bayesian Optimisation and GridSearch but due to lack of computational power , this has been postponed.
