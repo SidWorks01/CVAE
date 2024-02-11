@@ -1,6 +1,13 @@
 # CVAE
 Model that Generates inputs for particular outputs in a sinosoidal function using CVAE
 
+## Task
+
+Our Task At Hand is to:
+1. Predict the values of \( x_0 \) and \( x_1 \) that satisfy the equations \( y_1 = \sin(5x_0 + 3x_1) \) and \( y_2 = \cos(4x_0 + 8x_1) \), provided in the dataset located at ./data_1.
+
+2. Take on the more demanding task of predicting the values of \( x_0 \) and \( x_1 \) that fulfill the equations \( y_1 = \cos(49x_0 + 63x_1) \) and \( y_2 = \cos(4x_0 + 8x_1) \), found in the dataset located at ./data_2.
+
 ## Algorithm:
 An autoencoder is a type of neural network engineered to autonomously grasp the inherent identity of its input without explicit guidance, enabling it to reconstruct the initial data while concurrently condensing the information, thereby revealing a more streamlined and compressed depiction.
 It consists of two networks:
@@ -20,7 +27,7 @@ Instead of mapping the input into a fixed vector z, we want to map it into a dis
 
 Conditional Variational Autoencoders take a different turn and label the input and output data with a labelled given input.
 
-
+## Architecture:
 The following is the architecture behind CVAE:
 
 ![architecture](vae-gaussian.png)
@@ -42,6 +49,8 @@ Following is the algorithm's structure:
 7. We move to the decoder part where the Neural Network remains the same but the the generation is based on the labels or conditions of known data.
 
 As we discussed the CVAE Algorithm, we can see that the following Hyperparameters and Changes can play a big role of the model's outcomes.
+
+## Hyperparamters and Changes
 
 The Hyperparameters that affect the model are :
 
@@ -111,6 +120,7 @@ As we moved on to work our way to Hyperparamter tuning of out model we saw the f
 
 In this Notebook , I will be exploring Manual Estimation , so as to get an idea of how CVAE works and changes in Loss function Hyperparameters can affect the model.
 
+## Test Cases 
 
 We took the following test cases and found out the optimum Hyperparamters for our different datasets found in the repo:
 #### 2.4.1 Test Cases: Loss function = L1_mean
@@ -133,6 +143,7 @@ We took the following test cases and found out the optimum Hyperparamters for ou
 
 From Above test cases we can derive :
 
+## Results
 1. Latent space> 100
 2. beta>1
 3. 0.7 >wx > 0.5
